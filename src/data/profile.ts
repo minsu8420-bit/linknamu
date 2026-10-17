@@ -18,8 +18,7 @@ export const profile: Profile = {
 };
 
 export const links: LinkItem[] = [
-  // TODO: [내아이디]를 실제 GitHub 아이디로 교체
-  { id: "github", title: "GitHub", url: "https://github.com/[내아이디]" },
+  { id: "github", title: "GitHub", url: "https://github.com/minsu8420-bit" },
   { id: "email", title: "Email", url: "mailto:minsu8420@yonsei.ac.kr" },
   {
     id: "linkedin",
