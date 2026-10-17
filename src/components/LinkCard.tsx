@@ -5,12 +5,15 @@ type Props = {
 };
 
 export default function LinkCard({ link }: Props) {
+  // mailto: 등은 새 탭으로 열면 빈 탭이 남으므로 웹 링크만 새 탭으로 연다
+  const isWebLink = link.url.startsWith("http");
+
   return (
     <a
       href={link.url}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex h-16 w-full items-center justify-center rounded-2xl border border-zinc-300 bg-white px-5 text-base font-medium transition hover:-translate-y-0.5 hover:border-zinc-400 hover:shadow-md active:translate-y-0 dark:border-zinc-700 dark:bg-zinc-900 dark:hover:border-zinc-500"
+      target={isWebLink ? "_blank" : undefined}
+      rel={isWebLink ? "noopener noreferrer" : undefined}
+      className="flex h-14 w-full items-center justify-center rounded-2xl border border-white/10 bg-white/[0.06] px-5 text-[15px] font-medium text-slate-100 shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_8px_24px_-12px_rgba(0,0,0,0.6)] backdrop-blur-xl transition-colors duration-300 hover:border-white/20 hover:bg-white/[0.1] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/60 active:bg-white/[0.08]"
     >
       {link.title}
     </a>

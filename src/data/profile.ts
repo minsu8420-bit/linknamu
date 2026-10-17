@@ -2,7 +2,7 @@
 export type Profile = {
   name: string;
   bio: string;
-  avatarText: string;
+  avatarUrl: string;
 };
 
 export type LinkItem = {
@@ -12,13 +12,18 @@ export type LinkItem = {
 };
 
 export const profile: Profile = {
-  name: "김링크",
-  bio: "바이브코딩으로 이것저것 만드는 개발자",
-  avatarText: "K",
+  name: "정민수",
+  bio: "AI Transformation Consultant",
+  avatarUrl: "/profile.jpg",
 };
 
 export const links: LinkItem[] = [
-  { id: "github", title: "GitHub", url: "https://github.com" },
-  { id: "linkedin", title: "LinkedIn", url: "https://www.linkedin.com" },
-  { id: "blog", title: "Blog", url: "https://blog.naver.com" },
+  // TODO: [내아이디]를 실제 GitHub 아이디로 교체
+  { id: "github", title: "GitHub", url: "https://github.com/[내아이디]" },
+  { id: "email", title: "Email", url: "mailto:minsu8420@yonsei.ac.kr" },
+  {
+    id: "linkedin",
+    title: "LinkedIn",
+    url: "https://www.linkedin.com/in/%EB%AF%BC%EC%88%98-%EC%A0%95-8633962a6/",
+  },
 ];
